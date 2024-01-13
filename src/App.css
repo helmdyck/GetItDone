@@ -71,11 +71,6 @@ a {
   margin-left: 5px;
 }
 
-.list-group {
-  border-radius: 10px;
-  margin-bottom: 50px;
-}
-
 .copyright {
   color: rgba(255, 255, 255, 0.55);
 }
@@ -112,6 +107,12 @@ a {
 .list-body {
   padding: 1rem;
   border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.list-group {
+  border-radius: 10px;
+  
 }
 
 /*Modal*/

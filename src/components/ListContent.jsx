@@ -110,6 +110,10 @@ function ListContent() {
             </div>
           </div>
         </div>
+        <div className="copyright">
+          <hr />
+          <p>Helmuth Dyck</p>
+        </div>
       </div>
     </div>
   );
