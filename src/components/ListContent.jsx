@@ -14,6 +14,7 @@ function ListContent() {
     state.lists.find((l) => l.id === params.id)
   );
   const dispatch = useDispatch();
+  
 
   const [newItem, setNewItem] = useState([]);
 

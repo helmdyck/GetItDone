@@ -9,6 +9,7 @@ function NewListModal({ show, handleClose }) {
   const dispatch = useDispatch();
 
   const handleAddList = () => {
+    event.preventDefault();
     dispatch(
       addList({
         id: nanoid(),
@@ -31,7 +32,7 @@ function NewListModal({ show, handleClose }) {
       >
         <div className="modal-body">
           <i className="bi bi-x cancel" onClick={handleClose}></i>
-          <form action="">
+          <form action="" onSubmit={handleAddList}>
             <input
               className=""
               type="text"
