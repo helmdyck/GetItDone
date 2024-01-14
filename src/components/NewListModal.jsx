@@ -23,27 +23,24 @@ function NewListModal({ show, handleClose }) {
 
   return (
     <>
-      <div className="modal-container" style={{ display: show ? "flex" : "none" }} onHide={handleClose}>
+      <div
+        className="modal-container"
+        style={{ display: show ? "flex" : "none" }}
+        onHide={handleClose}
+      >
         <div className="modal-body">
-          <h4>Create a new list</h4>
+          <i className="bi bi-x cancel" onClick={handleClose}></i>
           <form action="">
             <input
-              className="input"
+              className=""
               type="text"
               name="newList"
               id="newList"
-              placeholder="Name it!"
+              placeholder="Create a list"
               onChange={(e) => setNewList(e.target.value)}
             />
           </form>
-          <div className="modal-actions">
-            <button variant="light" onClick={handleClose}>
-              Cancel
-            </button>
-            <button variant="secondary" onClick={handleAddList}>
-              Create List
-            </button>
-          </div>
+          <i className="bi bi-check2 create" onClick={handleAddList}></i>
         </div>
       </div>
     </>

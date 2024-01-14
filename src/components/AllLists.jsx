@@ -18,6 +18,7 @@ function AllLists() {
 
   return (
     <div>
+      <NewListModal show={show} handleClose={handleClose} />
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-sm-10 col-md-10 col-lg-10 col-xl-8 lists-body-home">
@@ -58,7 +59,7 @@ function AllLists() {
           </div>
         </div>
       </div>
-      <NewListModal show={show} handleClose={handleClose} />
+      
     </div>
   );
 }

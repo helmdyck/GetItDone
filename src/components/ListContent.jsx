@@ -56,22 +56,16 @@ function ListContent() {
                   <input
                     type="text"
                     name="item"
-                    className="form-control"
+                    className=""
                     id="item"
                     placeholder="Add Item"
                     value={newItem}
                     onChange={(e) => setNewItem(e.target.value)}
                   />
-                  <button
-                    type="submit"
-                    className="input-group-text btn border bg-white"
-                  >
-                    <i
-                      class="bi bi-plus-circle add-icon pt-2"
-                      src={add}
-                      alt=""
-                    ></i>
-                  </button>
+                  <i
+                    className="bi bi-check2 add-icon"
+                    onClick={handleSubmit}
+                  ></i>
                 </div>
               </form>
               <ul className="list-group mt-2">
@@ -98,12 +92,11 @@ function ListContent() {
                     >
                       {item.product}
                     </div>
-                    <img
-                      className="close-icon"
-                      src={close}
+                    <i
+                      className="bi bi-x-lg delete-icon"
                       alt=""
                       onClick={() => handleRemove(item)}
-                    />
+                    ></i>
                   </li>
                 ))}
               </ul>

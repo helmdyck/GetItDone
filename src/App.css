@@ -20,7 +20,7 @@ body {
 }
 
 .add-icon {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-size: 1.3rem;
   padding: 0;
 }
@@ -104,6 +104,31 @@ a {
   margin-left: 5px;
 }
 
+.input-group{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.input-group input{
+  height: 40px;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  padding-left: 15px;
+  border-radius: 20px;
+  border: none;
+}
+
+.input-group i {
+  color: black;
+  background-color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding-right: 17px;
+  padding-top: 3px;
+}
+
 .list-body {
   padding: 1rem;
   border-radius: 20px;
@@ -111,26 +136,71 @@ a {
 }
 
 .list-group {
-  border-radius: 10px;
+  border-radius: 20px;
   
+}
+
+.list-group-item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.list-group-item input {
+ margin: 0; 
+}
+
+.delete-icon{
+  cursor: pointer;
+  color: black;
+  font-size: 1.2rem;
+  margin-left: 1rem;
 }
 
 /*Modal*/
 
 .modal-container {
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-content: center;
-  backdrop-filter: blur(3px);
+  position: absolute;
+  
+  width: 100%;
+  height: 100vh;  
+  transition:0.5s ease-in-out;
+  backdrop-filter: blur(5px);
 }
 
 .modal-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   width: 90%;
+  margin: 1rem;
   background-color: white;
   border-radius: 12px;
   padding: 12px;
   width: 30%;
 }
+
+.modal-body form input{
+  height: 40px;
+  width: 90%;
+  color: white;
+  text-align: center;
+  border-radius: 20px;
+  border: none;
+  background-color: black;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.modal-body i {
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+/* .cancel{
+  font-size: ;
+} */
 
 @media (max-width: 992px) {
   /* … */
