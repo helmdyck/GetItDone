@@ -8,7 +8,7 @@ function NewListModal({ show, handleClose }) {
   const [newList, setNewList] = useState("");
   const dispatch = useDispatch();
 
-  const handleAddList = () => {
+  const handleAddList = (event) => {
     event.preventDefault();
     dispatch(
       addList({
@@ -30,19 +30,21 @@ function NewListModal({ show, handleClose }) {
         style={{ display: show ? "flex" : "none" }}
         onHide={handleClose}
       >
-        <div className="modal-body">
-          <i className="bi bi-x cancel" onClick={handleClose}></i>
-          <form action="" onSubmit={handleAddList}>
-            <input
-              className=""
-              type="text"
-              name="newList"
-              id="newList"
-              placeholder="Create a list"
-              onChange={(e) => setNewList(e.target.value)}
-            />
-          </form>
-          <i className="bi bi-check2 create" onClick={handleAddList}></i>
+        <div className="row">
+          <div className="col-sm-10 col-md-10 col-lg-10 col-xl-8 modal-body">
+            <i className="bi bi-x cancel" onClick={handleClose}></i>
+            <form action="" onSubmit={handleAddList}>
+              <input
+                className=""
+                type="text"
+                name="newList"
+                id="newList"
+                placeholder="Create a list"
+                onChange={(e) => setNewList(e.target.value)}
+              />
+            </form>
+            <i className="bi bi-check2 create" onClick={handleAddList}></i>
+          </div>
         </div>
       </div>
     </>
