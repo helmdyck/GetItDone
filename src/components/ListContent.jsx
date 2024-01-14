@@ -68,7 +68,7 @@ function ListContent() {
                   ></i>
                 </div>
               </form>
-              <ul className="list-group mt-2">
+              <ul className="list-group">
                 {list.items.map((item) => (
                   <li
                     className="list-group-item d-flex justify-content-between"
@@ -104,7 +104,6 @@ function ListContent() {
           </div>
         </div>
         <div className="copyright">
-          <hr />
           <p>Helmuth Dyck</p>
         </div>
       </div>

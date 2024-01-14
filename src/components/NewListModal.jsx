@@ -18,6 +18,7 @@ function NewListModal({ show, handleClose }) {
         createdAt: new Date().toLocaleDateString(),
       })
     );
+    setNewList("");
     handleClose();
   };
 

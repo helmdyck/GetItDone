@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import add from "../assets/add.svg";
 import { useSelector, useDispatch } from "react-redux";
-import close from "../assets/close.svg";
 import { Link } from "react-router-dom";
 import NewListModal from "../components/NewListModal";
 import { removeList } from "../redux/listsSlice";
@@ -28,7 +26,6 @@ function AllLists() {
             </h2>
             <i
               className="bi bi-plus-circle add-icon-home"
-              src={add}
               alt=""
               onClick={handleShow}
             ></i>
@@ -45,7 +42,6 @@ function AllLists() {
 
                   <i
                     className="bi bi-x-lg close-icon"
-                    src={close}
                     alt=""
                     onClick={() => handleRemove(list)}
                   ></i>
@@ -54,12 +50,10 @@ function AllLists() {
             </ul>
           </div>
           <div className="copyright">
-            <hr />
             <p>Helmuth Dyck</p>
           </div>
         </div>
       </div>
-      
     </div>
   );
 }
