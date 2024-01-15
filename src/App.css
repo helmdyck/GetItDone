@@ -12,6 +12,14 @@ body {
   margin: 0;
 }
 
+.instructions{
+  justify-content: center;
+}
+
+.instructions img{
+  width: 400px;
+}
+
 .close-icon {
   cursor: pointer;
   color: white;
@@ -212,19 +220,27 @@ a {
 } */
 
 @media (max-width: 992px) {
-  /* … */
+  .instructions img{
+    width: 400px;
+  }
 }
 
 @media (max-width: 768px) {
-  /* … */
+  
 }
 
 @media (max-width: 480px) {
-  /* … */
+  .instructions img{
+    width: 100%;
+  }
 }
 
 @media (max-width: 320px) {
   .lists-body-home {
     margin-top: 0;
+  }
+
+  .instructions img{
+    width: 100%;
   }
 }

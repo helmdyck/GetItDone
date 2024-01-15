@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import close from "../assets/close.svg";
-import add from "../assets/add.svg";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -14,7 +12,7 @@ function ListContent() {
     state.lists.find((l) => l.id === params.id)
   );
   const dispatch = useDispatch();
-  
+
 
   const [newItem, setNewItem] = useState([]);
 

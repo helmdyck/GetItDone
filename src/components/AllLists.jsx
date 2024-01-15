@@ -3,10 +3,13 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import NewListModal from "../components/NewListModal";
 import { removeList } from "../redux/listsSlice";
+import instructions from "../assets/instructions.png"
 
 function AllLists() {
   const lists = useSelector((state) => state.lists);
+  console.log(lists)
   const [show, setShow] = useState(false);
+  // const [instructions, setInstructions] = useState(true)
   const dispatch = useDispatch();
 
   const handleClose = () => setShow(false);
@@ -30,6 +33,11 @@ function AllLists() {
               onClick={handleShow}
             ></i>
           </div>
+
+          <div className="instructions" style={{ display: lists.length > 0? "none" : "flex" }}>
+            <img src={instructions} alt="" />
+          </div>
+
           <div className="col-sm-10 col-md-10 col-lg-10 col-xl-8 p-0">
             <ul className="list-group">
               {lists.map((list) => (
